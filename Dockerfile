@@ -3,9 +3,9 @@ FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-ENV NOMACHINE_PACKAGE_NAME nomachine_6.12.3_8_i686.deb
+ENV NOMACHINE_PACKAGE_NAME nomachine_6.12.3_7_amd64.deb
 ENV NOMACHINE_BUILD 6.12
-ENV NOMACHINE_MD5 53587973be063398f714cdb6810545af
+ENV NOMACHINE_MD5 4c6c5228825355dcb30ba5adfdd32c18
 
 # Helpers
 RUN apt-get update && apt-get install -y vim xterm pulseaudio cups 
