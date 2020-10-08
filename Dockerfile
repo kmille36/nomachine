@@ -1,11 +1,11 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-ENV NOMACHINE_PACKAGE_NAME nomachine_6.10.12_1_amd64.deb
-ENV NOMACHINE_BUILD 6.10
-ENV NOMACHINE_MD5 930ed68876b69a5a20f3f2b2c0650abc
+ENV NOMACHINE_PACKAGE_NAME nomachine_6.12.3_8_i686.rpm
+ENV NOMACHINE_BUILD 6.12
+ENV NOMACHINE_MD5 53587973be063398f714cdb6810545af
 
 # Helpers
 RUN apt-get update && apt-get install -y vim xterm pulseaudio cups 
@@ -28,7 +28,7 @@ RUN apt-get update && apt-get -y install google-chrome-stable
 RUN curl -s https://linux.dropbox.com/packages/ubuntu/dropbox_2020.03.04_amd64.deb -o dropbox_amd64.deb && \
 apt -y install ./dropbox_amd64.deb && rm ./dropbox_amd64.deb
 
-RUN curl -s https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb -o megacmd-xUbuntu_amd64.deb && \
+RUN curl -s https://mega.nz/linux/MEGAsync/xUbuntu_20.04/amd64/megasync-xUbuntu_20.04_amd64.deb -o megacmd-xUbuntu_amd64.deb && \
 apt -y install ./megacmd-xUbuntu_amd64.deb && rm ./megacmd-xUbuntu_amd64.deb
 
 RUN apt-get clean
