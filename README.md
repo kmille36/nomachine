@@ -1,5 +1,5 @@
-# docker-ubuntu-mate-desktop-nomachine 6.12
-Ubuntu Desktop 20.04 (MATE) Dockerfile with NoMachine 6.12 remote access
+# docker-ubuntu-mate-desktop-nomachine 7.1
+Ubuntu Desktop 20.04 (MATE) Dockerfile with NoMachine 7.1 remote access
 
 There are three tags available:
 
@@ -31,7 +31,7 @@ PASSWORD -> password for the nomachine login
 ## Usage
 
 ```
-docker run -d -p 4000:4000 --name nomachine -e PASSWORD=password -e USER=user --cap-add=SYS_PTRACE --shm-size=1g lordcris/nomachine
+docker run --rm -d -p 4000:4000 --name nomachine -e PASSWORD=password -e USER=user --cap-add=SYS_PTRACE --shm-size=1g lordcris/nomachine
 ```
 
 ## Connect to the container
