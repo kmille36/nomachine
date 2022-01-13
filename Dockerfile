@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y vim xterm pulseaudio cups 
 
 RUN apt-get -y dist-upgrade 
-RUN apt-get install -y software-properties-common firefox nano sudo && add-apt-repository ppa:leaeasy/dde -y && apt-get update &&  apt-get install dde dde-file-manager && apt install deepin-gtk-theme
+RUN apt-get install -y software-properties-common firefox nano sudo && add-apt-repository ppa:leaeasy/dde -y && apt-get update &&  apt-get install dde dde-file-manager -y && apt install deepin-gtk-theme -y
 
 RUN apt-get install -y wget curl
 
