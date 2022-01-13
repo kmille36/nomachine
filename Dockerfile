@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y vim xterm pulseaudio cups 
 
 RUN apt-get -y dist-upgrade 
-RUN apt-get install -y software-properties-common firefox nano sudo tasksel && tasksel install kubuntu-desktop
+RUN apt-get install -y software-properties-common firefox nano sudo tasksel && sudo add-apt-repository ppa:ubuntukylin-members/ukui -y && sudo apt update && sudo apt install ukui-desktop-environment -y
 RUN apt-get install -y wget curl
 
 RUN curl -fSL "https://download.nomachine.com/download/7.7/Linux/nomachine_7.7.4_1_amd64.deb" -o nomachine.deb \
