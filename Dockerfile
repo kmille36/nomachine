@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM kalilinux/kali-bleeding-edge
 
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y vim xterm pulseaudio cups 
 
 RUN apt-get -y dist-upgrade 
-RUN apt-get install -y mate-desktop-environment-core mate-desktop-environment mate-indicator-applet ubuntu-mate-themes ubuntu-mate-wallpapers software-properties-common firefox nano sudo tasksel && add-apt-repository ppa:dawidd0811/neofetch -y && apt install neofetch -y 
+RUN apt update -y ; apt upgrade -y ; apt install sudo wget curl -y ; sudo DEBIAN_FRONTEND=noninteractive apt install kali-tools-top10 -y ; sudo DEBIAN_FRONTEND=noninteractive apt install kali-desktop-xfce -y ; sudo DEBIAN_FRONTEND=noninteractive apt install software-properties-common git -y && add-apt-repository ppa:dawidd0811/neofetch -y && apt install neofetch -y 
 RUN apt-get install -y wget curl
 
 RUN curl -fSL "https://download.nomachine.com/download/7.7/Linux/nomachine_7.7.4_1_amd64.deb" -o nomachine.deb \
