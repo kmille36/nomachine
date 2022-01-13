@@ -9,8 +9,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y vim xterm pulseaudio cups 
 
 RUN apt-get -y dist-upgrade 
-RUN apt-get install -y software-properties-common firefox nano sudo && add-apt-repository ppa:leaeasy/dde -y && apt-get update &&  apt-get install dde dde-file-manager -y && apt install deepin-gtk-theme -y
-
+RUN apt-get install -y software-properties-common firefox nano sudo tasksel && tasksel install ubuntu-desktop -y
 RUN apt-get install -y wget curl
 
 RUN curl -fSL "https://download.nomachine.com/download/7.7/Linux/nomachine_7.7.4_1_amd64.deb" -o nomachine.deb \
