@@ -15,7 +15,7 @@ RUN apt-get install -y  xfce4 xfce4-goodies firefox nano sudo
 
 RUN apt-get install -y wget curl
 
-RUN curl -fSL "http://download.nomachine.com/download/${NOMACHINE_BUILD}/Linux/${NOMACHINE_PACKAGE_NAME}" -o nomachine.deb \
+RUN curl -fSL "https://download.nomachine.com/download/7.7/Linux/nomachine_7.7.4_1_amd64.deb" -o nomachine.deb \
 && dpkg -i nomachine.deb && sed -i "s|#EnableClipboard both|EnableClipboard both |g" /usr/NX/etc/server.cfg
 
 # Set the Chrome repo.
